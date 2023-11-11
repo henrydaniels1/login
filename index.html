@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Responsive Navbar</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <!--p-4-->
+  <nav class="bg-[#4461F2] p-4">
+    <div class="container mx-auto flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <div> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" viewBox="0 0 32 30" fill="none">
+<rect width="23.7953" height="5.15228" transform="matrix(0.64133 -0.767265 0.815003 0.579456 0 18.2573)" fill="white"/>
+<rect width="23.7953" height="5.15228" transform="matrix(0.64133 -0.767265 0.815003 0.579456 5.84912 22.4157)" fill="white"/>
+<rect width="23.7953" height="5.15228" transform="matrix(0.64133 -0.767265 0.815003 0.579456 11.6196 26.4186)" fill="white"/>
+                    </svg></div>
+        <p class="text-white text-xl font-semibold">OFFLINK</p>
+      </div>
+     
+
+      <!-- Navbar Links - Desktop -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="text-white">Home</a>
+        <a href="#" class="text-white">Sign in</a>
+        <a href="#" class="text-white">Login</a>
+        <a href="#" class="text-white">Contact</a>
+      </div>
+
+      <!-- Navbar Toggle Button - Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu - Hidden by default -->
+  <div id="mobile-menu" class="md:hidden  p-4 h-[93vh] hidden flex flex-col space-y-8">
+    <a href="#" class="block text-[#4461F2] text-xl text-center">Home</a>
+    <a href="#" class="block text-[#4461F2] text-xl text-center">Sign in</a>
+    <a href="#" class="block text-[#4461F2] text-xl text-center">Login</a>
+    <a href="#" class="block text-[#4461F2] text-xl text-center">Contact</a>
+  </div>
+
+  <!-- Container Section - Initially visible, hides when mobile menu is toggled -->
+  <section id="main-content" class="container mx-auto h-[93vh] md:p-8 lg:p-0  md:flex block lg:flex-row flex-col justify-between items-center w-full space-y-6 md:space-y-0">
+    
+    <div class="img-sec flex   md:flex-row flex-col-reverse lg:w-[65%] md:w-[95%] w-full p-4 md:p-0 space-y-6 md:space-y-0">
+
+<div class="flex items-center justify-center md:flex-row flex-col-reverse">
+        <div class="md:w-[50%]  w-full  space-y-4 px-4 md:px-0 pt-8 md:pt-0 lg:pt-0">
+            <p class="lg:text-5xl md:text-4xl text-3xl font-semibold text-black lg:leading-[77px]">Sign In to <br> Recharge Direct</p>
+            <p class="text-xl font-semibold">if you don’t an account <br> you can <span class="text-[#4461F2]">Register here!</span> </p>
+        </div>
+
+        <div class="image md:w-[50%] w-full  h-full hidden md:block">
+            <img src="/img/img1.png" alt="" class="object-contain md:h-[25rem] h-[15rem]">
+        </div>
+</div>
+
+    </div>
+
+
+    <div class="login-sec lg:w-[30%] w-full p-4 lg:p-0  h-[20rem] md:h-[25rem]">
+        
+<div class="w-full px-4 md:px-0">
+<form action="" class="w-full ">
+
+    <div class=" w-full space-y-4">
+    <input type="email" placeholder="Enter Email" value="" class="w-full py-3 rounded-md flex items-center px-3 bg-[#EAF0F7]">
+
+    <input type="password" placeholder="********" value="" class="w-full py-3 rounded-md px-3 flex items-center bg-[#EAF0F7]">
+    </div>
+
+    <button class="w-full py-2 flex items-center justify-center bg-[#4461F2] md:mt-10 lg:mt-14 mt-6 rounded-md text-white">Sign up</button>
+
+</form>
+</div>
+
+<div class="flex justify-between items-center  lg:mt-14 md:mt-10 mt-6 px-4 md:px-0">
+    <div class="dash w-[40%] bg-[#DFDFDF] h-[0.1rem]"></div>
+    <p class="text-[#ACADAC]">or</p>
+    <div class="dash w-[40%] bg-[#DFDFDF] h-[0.1rem]"></div>
+</div>
+
+<div class="w-full px-4 md:px-0 mt-6 lg:mt-16 md:mt-10 flex justify-between items-center">
+<p class="text-xl font-semibold">Already have an account?</p>
+<a href="" class="text-[#4461F2] text-xl font-semibold">Sign in</a>
+</div>
+
+
+
+ <!-- <div class='icons w-full h-[3rem] mt-6 lg:mt-16 md:mt-10 flex items-center justify-between px-4 md:px-0 '>
+            <div class='h-full rounded-md w-[30%] bg-[#DDDFDD] flex items-center justify-center'>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+<path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+</svg>
+            </div>
+            
+            <div class='h-full rounded-md w-[30%] bg-[#DDDFDD] flex items-center justify-center'>
+             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
+    <path d="M25.565,9.785c-0.123,0.077-3.051,1.702-3.051,5.305c0.138,4.109,3.695,5.55,3.756,5.55 c-0.061,0.077-0.537,1.963-1.947,3.94C23.204,26.283,21.962,28,20.076,28c-1.794,0-2.438-1.135-4.508-1.135 c-2.223,0-2.852,1.135-4.554,1.135c-1.886,0-3.22-1.809-4.4-3.496c-1.533-2.208-2.836-5.673-2.882-9 c-0.031-1.763,0.307-3.496,1.165-4.968c1.211-2.055,3.373-3.45,5.734-3.496c1.809-0.061,3.419,1.242,4.523,1.242 c1.058,0,3.036-1.242,5.274-1.242C21.394,7.041,23.97,7.332,25.565,9.785z M15.001,6.688c-0.322-1.61,0.567-3.22,1.395-4.247 c1.058-1.242,2.729-2.085,4.17-2.085c0.092,1.61-0.491,3.189-1.533,4.339C18.098,5.937,16.488,6.872,15.001,6.688z"></path>
+</svg> 
+            </div>
+
+           
+
+            <div class='h-full rounded-md w-[30%] bg-[#DDDFDD] flex items-center justify-center'>
+           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+<linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient><path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"></path>
+</svg>
+</div>
+
+          </div> -->
+
+
+    </div>
+  </section>
+
+
+
+
+  <script>
+    // Toggle mobile menu visibility and main content visibility
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('main-content').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
